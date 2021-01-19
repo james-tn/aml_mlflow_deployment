@@ -183,11 +183,11 @@ H = model.fit(
 
 # serialize the model to disk
 print("[INFO] saving object detector model...")
-model.save(config.MODEL_PATH, save_format="h5")
+model.save(config.MODEL_PATH_TRAIN, save_format="h5")
 
 # serialize the label binarizer to disk
 print("[INFO] saving label binarizer...")
-f = open(config.LB_PATH, "wb")
+f = open(config.LB_PATH_TRAIN, "wb")
 f.write(pickle.dumps(lb))
 f.close()
 
